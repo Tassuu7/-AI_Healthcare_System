@@ -1,0 +1,90 @@
+/* MAIN APP */
+.stApp{
+    background: linear-gradient(
+        135deg,
+        #081028 0%,
+        #0f172a 50%,
+        #172554 100%
+    );
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"]{
+    background:#020617;
+}
+
+/* HEADINGS */
+h1,h2,h3,h4,h5,h6{
+    color:#ffffff !important;
+    font-weight:700;
+}
+
+/* NORMAL TEXT */
+p,span,label{
+    color:#e2e8f0 !important;
+}
+
+/* METRIC CARDS */
+div[data-testid="metric-container"]{
+    background:#111827;
+    border:1px solid #334155;
+    border-radius:15px;
+    padding:20px;
+}
+
+/* CUSTOM WHITE CARDS */
+.module-card,
+.feature-card{
+    background:#ffffff !important;
+    color:#0f172a !important;
+    border-radius:15px;
+    padding:20px;
+    border:1px solid #cbd5e1;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* TEXT INSIDE WHITE CARDS */
+.module-card h1,
+.module-card h2,
+.module-card h3,
+.module-card h4,
+.module-card p,
+.module-card div,
+.module-card span,
+
+.feature-card h1,
+.feature-card h2,
+.feature-card h3,
+.feature-card h4,
+.feature-card p,
+.feature-card div,
+.feature-card span{
+    color:#0f172a !important;
+}
+
+/* DATAFRAMES */
+[data-testid="stDataFrame"]{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+/* BUTTONS */
+.stButton button{
+    background:#0ea5e9;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* INPUTS */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox{
+    border-radius:10px;
+}
+
+/* SUCCESS BOX */
+.stSuccess{
+    border-radius:10px;
+}

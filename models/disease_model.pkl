@@ -1,0 +1,46 @@
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+import pickle
+
+np.random.seed(42)
+
+data = pd.DataFrame({
+
+    "Age": np.random.randint(18,80,500),
+
+    "BP": np.random.randint(90,180,500),
+
+    "Sugar": np.random.randint(70,300,500),
+
+    "Cholesterol": np.random.randint(120,300,500),
+
+    "Disease":
+    np.random.choice(
+        [0,1],
+        500
+    )
+})
+
+X=data[[
+"Age",
+"BP",
+"Sugar",
+"Cholesterol"
+]]
+
+y=data["Disease"]
+
+model=RandomForestClassifier()
+
+model.fit(X,y)
+
+pickle.dump(
+    model,
+    open(
+        "models/disease_model.pkl",
+        "wb"
+    )
+)
+
+print("Disease Model Saved")

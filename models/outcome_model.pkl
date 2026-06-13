@@ -1,0 +1,56 @@
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestRegressor
+import pickle
+
+np.random.seed(42)
+
+data=pd.DataFrame({
+
+"Age":
+np.random.randint(
+18,
+80,
+500
+),
+
+"Severity":
+np.random.randint(
+1,
+10,
+500
+),
+
+"Recovery":
+np.random.randint(
+40,
+100,
+500
+)
+
+})
+
+X=data[
+[
+"Age",
+"Severity"
+]
+]
+
+y=data["Recovery"]
+
+model=RandomForestRegressor()
+
+model.fit(X,y)
+
+pickle.dump(
+model,
+open(
+"models/outcome_model.pkl",
+"wb"
+)
+)
+
+print(
+"Outcome Model Saved"
+)
